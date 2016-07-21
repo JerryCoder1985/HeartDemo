@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@android:color/white"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnHeartView"
+        android:layout_width="80dip"
+        android:layout_height="50dip"
+        android:text="点赞"
+        android:layout_alignParentBottom="true"
+        android:onClick="addHeart"/>
+
+    <Button
+        android:id="@+id/btnOtherHeart"
+        android:layout_width="80dip"
+        android:layout_height="50dip"
+        android:text="别人点赞"
+        android:layout_toRightOf="@+id/btnHeartView"
+        android:layout_alignParentBottom="true"
+        android:onClick="addOtherHeart"/>
+
+
+    <com.jerry.studio.view.HeartView
+        android:id="@+id/heartView"
+        android:layout_width="300dip"
+        android:layout_height="600dip"
+        android:layout_above="@+id/btnHeartView"/>
+</RelativeLayout>
